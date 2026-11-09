@@ -36,6 +36,12 @@ ZINEDU = ("ZinEdu Classes Pvt. Ltd.", "Front-End Developer", "Aug 2021 – Feb 2
 VOX = ("Ollama Vox — Local macOS Voice Assistant", "Apr 2026 – May 2026",
        "github.com/maadhav-codes/ollama-vox", "https://github.com/maadhav-codes/ollama-vox",
        "Python, PySide6/Qt, Ollama, MLX Whisper, Kokoro TTS, pytest")
+PENIFY_SDE2 = ("Penify.dev", "Software Engineer II (SDE-2)", "Feb 2025 – Oct 2025")
+PENIFY_SDE1 = ("Penify.dev", "Software Engineer I (SDE-1)", "Jul 2023 – Jan 2025")
+BREAK = ("Independent AI Tooling Projects", "Self-directed", "Jan 2026 – Present")
+ANIME = ("Anime Companion — Streaming AI Chat with Voice", "Oct 2026",
+         "github.com/maadhav-codes/anime-ai-companion", "https://github.com/maadhav-codes/anime-ai-companion",
+         "React 19, TypeScript, Vite, Tailwind CSS, Live2D, Gemini/Groq/Ollama APIs, Kokoro TTS")
 D2C = ("diff2commit — AI-Powered Git Commit CLI", "Oct 2025 – Nov 2025",
        "github.com/maadhav-codes/diff2commit", "https://github.com/maadhav-codes/diff2commit",
        "Python, Git, Rich, Ollama, OpenAI-compatible APIs")
@@ -136,48 +142,54 @@ RESUMES = {
     },
 
     "Fullstack": {
-        "headline": "Full-Stack Engineer | React, TypeScript, Python/FastAPI | AI Developer Tools",
+        "headline": "Full-Stack Engineer | React, TypeScript, Python/FastAPI | Payments, Integrations & LLM Tooling",
         "summary": (
-            "Full-Stack Engineer with 4+ years of experience building SaaS products end to end with React, "
-            "TypeScript, and Python/FastAPI. At Penify.dev, owned features from dashboard UI to API, including "
-            "payments, GitHub App integrations, OAuth, and documentation generation. At BLACKBOX AI, built an "
-            "AI application-generation platform that takes a prompt all the way to a deployed app."
+            "Full-Stack Engineer with 4+ years shipping SaaS products in React/TypeScript and Python/FastAPI. "
+            "At Penify.dev, promoted from SDE-1 to SDE-2 in 19 months; owned billing (Cashfree, PayPal), "
+            "GitHub App integrations, OAuth, and the customer dashboard. At BLACKBOX AI, built the agent "
+            "execution layer and workspace UI for a prompt-to-deployed-app product. Comfortable owning a "
+            "feature from API and data model through UI to production."
         ),
         "skills": [
-            ("Languages", "TypeScript, JavaScript, Python, SQL, HTML, CSS"),
-            ("Frontend", "React, Next.js, TanStack Query (React Query), Redux Toolkit, Zustand, Tailwind CSS, shadcn/ui"),
-            ("Backend & APIs", "FastAPI, Node.js, Pydantic, REST APIs, OAuth 2.0, JWT, Webhooks, Prisma ORM, Alembic"),
-            ("Databases", "PostgreSQL, MongoDB, Redis, Supabase"),
-            ("AI & LLM", "OpenAI API, Gemini API, Ollama, agent workflows"),
-            ("Testing & Delivery", "pytest, Docker, Git, GitHub Actions (CI/CD), Vercel, Vercel Sandboxes"),
+            ("Languages", "TypeScript, JavaScript, Python, SQL"),
+            ("Frontend", "React, Next.js, TanStack Query, Tailwind CSS, shadcn/ui, streaming UIs"),
+            ("Backend & APIs", "FastAPI, Pydantic, Node.js, REST APIs, Webhooks, OAuth 2.0, JWT"),
+            ("Data", "PostgreSQL, MongoDB"),
+            ("Integrations", "GitHub Apps, Cashfree, PayPal, Vercel API, OpenAI-compatible APIs, Ollama"),
+            ("Testing & Delivery", "pytest, Docker, Git, GitHub Actions, Vercel, Vercel Sandboxes"),
         ],
         "jobs": [
-            (BLACKBOX, [
-                "Built an AI application-generation platform that streamed LLM responses and converted natural-language prompts into project files inside isolated Vercel Sandboxes.",
-                "Implemented agent workflows for file generation, command execution, and status tracking, and connected chat, a code explorer, terminal logs, and live previews in one workspace.",
-                "Automated GitHub repository creation, sandbox-file synchronization, and Vercel production deployments; persisted project, conversation, execution, and deployment state in MongoDB.",
+            (BREAK, [
+                "Building local-first AI tools in Python and TypeScript; see Projects.",
             ]),
-            (PENIFY, [
-                "Built FastAPI endpoints and service-layer logic for repository workflows, user accounts, analytics, and Git-provider integrations.",
-                "Implemented Cashfree and PayPal checkout, transaction validation, and repository-based subscription eligibility, plus the payment-history, plan-upgrade, and coupon-redemption UIs.",
-                "Built GitHub App integrations for repository discovery, organization filtering, usage analytics, and documentation-generation requests.",
-                "Developed the React/TypeScript dashboard and reusable components for repository management, documentation jobs, profiles, and API-key management, with Google/GitHub OAuth and protected routes.",
-                "Extended documentation workflows with TypeDoc integration, changelog generation, and multi-language support; built the Next.js/Tailwind marketing site.",
+            (BLACKBOX, [
+                "Built the agent execution layer for BLACKBOX's prompt-to-app product: LLM-generated files written and run inside isolated Vercel Sandboxes, with file-generation and command status streamed to the client.",
+                "Shipped the React/TypeScript workspace UI: streaming chat, code explorer, terminal logs, and live app previews.",
+                "Automated one-click GitHub repository creation and Vercel production deployment; persisted project, conversation, execution, and deployment state in MongoDB.",
+            ]),
+            (PENIFY_SDE2, [
+                "Owned billing end to end: Cashfree and PayPal checkout, server-side transaction validation, and repository-based subscription eligibility in FastAPI, wired into the billing dashboard.",
+                "Built GitHub App integrations for repository discovery, organization filtering, usage analytics, and triggering documentation-generation jobs.",
+                "Designed FastAPI endpoints and service-layer logic for repositories, accounts, analytics, and Git providers; extended the docs engine with TypeDoc, changelogs, and multi-language support.",
+            ]),
+            (PENIFY_SDE1, [
+                "Built the React/TypeScript customer dashboard and shared component library: repository management, documentation jobs, job tracking, profiles, and API-key management.",
+                "Implemented authentication: sign-up, password recovery, protected routes, and Google/GitHub OAuth.",
+                "Shipped payment-history, plan-upgrade, and coupon flows, plus the Next.js/Tailwind marketing site and product tour.",
             ]),
             (FREELANCE, [
-                "Delivered custom websites and web apps for remote clients, from requirements through testing, feedback iterations, and deployment support.",
-                "Built 30+ responsive interfaces from design specs, and React applications integrated with backend services and third-party APIs.",
+                "Delivered custom websites and React web apps for remote clients, owning requirements, API integrations, feedback iterations, and deployment.",
             ]),
             (ZINEDU, [
-                "Developed React interfaces for an EdTech platform, including role-based dashboards and admin tools for users, attendance, and fees, with REST API, payment, and Excel/CSV/PDF reporting integrations.",
+                "Built role-based React dashboards (student, teacher, admin) for classes, exams, and analytics, plus admin tools for attendance and fees with CSV/PDF reporting.",
             ]),
         ],
         "projects": [
             (VOX, [
-                "Built a macOS menu-bar voice assistant with on-device speech recognition, LLM inference, and text-to-speech, using a three-worker pipeline with bounded queues and cancellation to keep the Qt UI responsive.",
+                "Built a fully on-device voice assistant (speech recognition → LLM → TTS) on a three-worker pipeline with bounded queues and cancellation that keeps the Qt UI responsive; pytest-tested with mocked audio hardware.",
             ]),
-            (D2C, [
-                "Built and packaged a Python CLI that writes Conventional Commit messages from staged diffs using local or remote LLMs, with validation and repository-state consistency checks.",
+            (ANIME, [
+                "Built a browser AI companion with token-streamed LLM chat, sentence-level TTS queuing for low-latency voice replies, switchable Gemini/Groq/Ollama providers, and LLM emotion tags driving Live2D expressions.",
             ]),
         ],
     },
@@ -246,6 +258,7 @@ p { margin: 0; }
 .org { font-weight: bold; margin-top: 5px; }
 .role { font-style: italic; font-weight: normal; }
 .org .date { font-weight: normal; }
+.sub { margin-top: 2px; }
 .date { white-space: nowrap; }
 ul { margin: 1px 0 0; padding-left: 15px; }
 li { margin: 0 0 1px; }
@@ -273,8 +286,16 @@ def render(role, r):
     parts.append("<h2>Skills</h2><div class='skills'>" + "".join(
         f"<div><b>{e(k)}:</b> {e(v)}</div>" for k, v in r["skills"]) + "</div>")
     parts.append("<h2>Experience</h2>")
+    prev_org = None
     for (org, title, dates), items in r["jobs"]:
-        parts.append(f'<div class="row org"><span>{e(org)} <span class="role">— {e(title)}</span></span>'
+        if org == prev_org:  # same company, new title (promotion): show role only
+            head = f'<span class="role">{e(title)}</span>'
+            cls = "row sub"
+        else:
+            head = f'{e(org)} <span class="role">— {e(title)}</span>'
+            cls = "row org"
+        prev_org = org
+        parts.append(f'<div class="{cls}"><span>{head}</span>'
                      f'<span class="date">{e(dates)}</span></div>' + bullets(items))
     parts.append("<h2>Projects</h2>")
     for (name, dates, ltxt, lhref, tech), items in r["projects"]:
